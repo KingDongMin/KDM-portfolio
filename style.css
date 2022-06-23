@@ -1,0 +1,160 @@
+/*글로벌 세팅 */
+:root{
+    /* color */
+    --color-black: #272629;
+    --color-dark-grey:#4a494c;
+    --color-grey:#68676a;
+    --color-light-grey:#858587;
+    --color-brilliant-grey:#aaa9ab;
+    --color-blue:#aca2f7;
+    --color-white:#f5f4fe;
+
+    /* font size */
+    --font--size-huge:42.63px;
+    --font-size-large:31.98px;
+    --font-size-medium:23.99px;
+    --font-size-regular:18px;
+    --font-size-small:13.50px;
+
+    /* font weight */
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-weight-light: 300;
+
+}
+
+/* 타이포그래피 */
+h1 {
+    font-size: var(--font--size-huge);
+    font-weight: var(--font-weight-bold);
+    margin: 15px 0px;
+}
+h2 {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    margin: 7px 0px;
+}
+h3 {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+    margin: 5px 0px;
+}
+p {
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-medium);
+}
+
+
+/* 시멘틱태그 */
+* {
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    font-family: 'Do Hyeon', sans-serif;
+    /* 글자사이 간격 조절 */
+    letter-spacing:1.2px; 
+    color: var(--color-black);
+}
+ul{
+    padding:0;
+}
+li{
+    list-style: none;
+}
+
+/* navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 19.416px 12px;
+    position: fixed;
+    top:0;
+    transition: all 0.4s ease-in;
+
+    background-color: transparent;
+    color: var(--color-white);
+}
+.navbar__logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.navbar__logo i{
+    font-size: 25px;
+    padding-right: 7px;
+}
+.navbar__menu{
+    display: flex;
+    cursor: pointer;
+
+    margin:0;
+}
+.navbar__menu li{
+    padding: 7px 11px;
+    margin-left: 10px;
+}
+.navbar__menu li:hover{
+    background-color: var(--color-dark-grey);
+    border-radius: 5px;
+    color: var(--color-blue);
+    transform: scale(1.1);
+    transition: transform 0.22s ease-in;
+}
+.navbar__menuBtn {
+    position: absolute;
+    right: 12px;
+    top: 26px;
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+.navbar__menuBtn:hover{
+    color: var(--color-blue);
+    transform: scale(1.15);
+    transition: transform 0.22s ease-in;
+}
+
+/* 맨 상단에서 벗어나면 배경색 지정 */
+#navbar.navbar--dark {
+    background-color: var(--color-black);
+    box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.406);
+}
+
+/* position 테스트용 섹션 영역 정의 */
+section {
+    background-color: aqua;
+    /* 왜 width를 100vw로 하면 웹페이지에서 가로 스크롤이 나오고
+    100%로 할때는 왜 안나오는 것일까?
+    100vw단위는 웹페이지의 가로크기의 100을 쓴다는 것이 아닌가?
+    100%도 같은 의미인데... %와 vw,vh의 차이는? */
+    width: 100%;
+    height: 100vh;
+    
+}
+
+@media screen and (max-width:670px) {
+    #navbar{
+        flex-direction: column;
+        align-items:unset;
+    }
+    .navbar__menuBtn{
+        display: block;
+    }
+    .navbar__menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar__menu.active{
+        display:flex
+    }
+    .navbar__menu li{
+        width: 80%;
+        text-align: center;
+    }
+    
+}
