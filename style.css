@@ -6,7 +6,7 @@
     --color-grey:#68676a;
     --color-light-grey:#858587;
     --color-brilliant-grey:#aaa9ab;
-    --color-blue:#aca2f7;
+    --color-green:#00f55a;
     --color-white:#f5f4fe;
 
     /* font size */
@@ -17,9 +17,9 @@
     --font-size-small:13.50px;
 
     /* font weight */
-    --font-weight-bold: 700;
-    --font-weight-medium: 500;
-    --font-weight-light: 300;
+    --font-weight-bold: 500;
+    --font-weight-medium: 300;
+    --font-weight-light: 200;
 
 }
 
@@ -62,6 +62,17 @@ ul{
 li{
     list-style: none;
 }
+/* position 테스트용 섹션 영역 정의 */
+section {
+    background-color: aqua;
+    /* 왜 width를 100vw로 하면 웹페이지에서 가로 스크롤이 나오고
+    100%로 할때는 왜 안나오는 것일까?
+    100vw단위는 웹페이지의 가로크기의 100을 쓴다는 것이 아닌가?
+    100%도 같은 의미인데... %와 vw,vh의 차이는? */
+    width: 100%;
+    height: 100vh;
+    
+}
 
 /* navbar */
 #navbar {
@@ -70,10 +81,11 @@ li{
     align-items: center;
 
     width: 100%;
-    padding: 19.416px 12px;
+    padding: 14px 12px;
     position: fixed;
     top:0;
     transition: all 0.4s ease-in;
+    z-index: 2;
 
     background-color: transparent;
     color: var(--color-white);
@@ -100,14 +112,14 @@ li{
 .navbar__menu li:hover{
     background-color: var(--color-dark-grey);
     border-radius: 5px;
-    color: var(--color-blue);
+    color: var(--color-green);
     transform: scale(1.1);
     transition: transform 0.22s ease-in;
 }
 .navbar__menuBtn {
     position: absolute;
     right: 12px;
-    top: 26px;
+    top: 20px;
     font-size: 25px;
     display: none;
     cursor: pointer;
@@ -117,26 +129,56 @@ li{
     transform: scale(1.15);
     transition: transform 0.22s ease-in;
 }
-
 /* 맨 상단에서 벗어나면 배경색 지정 */
 #navbar.navbar--dark {
     background-color: var(--color-black);
     box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.406);
 }
 
-/* position 테스트용 섹션 영역 정의 */
-section {
-    background-color: aqua;
-    /* 왜 width를 100vw로 하면 웹페이지에서 가로 스크롤이 나오고
-    100%로 할때는 왜 안나오는 것일까?
-    100vw단위는 웹페이지의 가로크기의 100을 쓴다는 것이 아닌가?
-    100%도 같은 의미인데... %와 vw,vh의 차이는? */
+
+/* home */
+#home {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home video{
+    position:absolute;
     width: 100%;
-    height: 100vh;
-    
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.home__profile{
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.profile__photo{
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    opacity:0.9;
+    margin-bottom: 30px;
+}
+.profile__title{
+    color:var(--color-white);
+    font-weight: 10
 }
 
-@media screen and (max-width:670px) {
+
+
+
+
+
+
+@media screen and (max-width:690px) {
     #navbar{
         flex-direction: column;
         align-items:unset;
