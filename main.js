@@ -46,6 +46,8 @@ contactBtn.addEventListener('click', (event)=>{
     scrollTo.scrollIntoView({behavior:'smooth'});
 })
 
+// aboutme
+// about 섹션에 들어오면 skills에 대한 숙련도 wave 활성화
 document.addEventListener('scroll', ()=> {
     const about = document.querySelector('#about');
     const skillIcon = document.querySelectorAll('.skill__icon');
@@ -76,6 +78,25 @@ document.addEventListener('scroll', ()=> {
             i.classList.remove('active');
         }
         for(var i of skillPercent){
+            i.classList.remove('active');
+        }
+    }
+})
+
+// skills
+// skills 게이지 표현
+document.addEventListener('scroll', ()=> {
+    const skills = document.querySelector('#skills');
+    const skillValue = document.querySelectorAll('.skill__value');
+    const skillsArea = skills.getBoundingClientRect(); // skills에 해당하는 위치를 가져오기
+    const range = skillsArea.height + skillsArea.top;
+
+    if(range >= 0 && range <= (skillsArea.height+200) ){
+        for(var i of skillValue){
+            i.classList.add('active');
+        }
+    }else {
+        for(var i of skillValue){
             i.classList.remove('active');
         }
     }

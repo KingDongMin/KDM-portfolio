@@ -7,13 +7,14 @@
     --color-light-grey:#858587;
     --color-brilliant-grey:#aaa9ab;
     --color-green:#00f55a;
-    --color-white:#f5f4fe;
+    --color-white:#e6e5ee;
+    --color-ligth-white:#f5f4fe;
 
     /* font size */
     --font--size-huge:42.63px;
     --font-size-large:31.98px;
     --font-size-medium:23.99px;
-    --font-size-regular:18px;
+    --font-size-regular:16px;
     --font-size-small:13.50px;
 
     /* font weight */
@@ -65,8 +66,7 @@ li{
 section {
     width: 100%;
     min-height: 100vh;
-    padding : 0px 10%;
-    
+    padding : 70px 10%;
 }
 
 /* navbar */
@@ -143,6 +143,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    top: 0;
     filter: brightness(50%);
 }
 .home__profile{
@@ -195,16 +196,13 @@ section {
     align-items: center;
     justify-content: center;
 }
-.about__title{
-    margin-top: 70px;
-}
 .about__skills{
     display: flex;
     justify-content: space-around;
     width: 100%;
     margin-top: 40px;
 }
-.skill{
+.about__skill{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,13 +222,14 @@ section {
     overflow: hidden;
     transition: color 2s ease-in;
 }
-#about .skill ul{
+#about .about__skill ul{
     font-size: var(--font-size-small);
     margin: 0px;
 }
-#about .skill li{
+#about .about__skill li{
     list-style:circle;
     padding: 5px 0px;
+    color:var(--color-light-grey);
 }
 #about .skill__icon__wave{
     width: 300px;
@@ -295,12 +294,82 @@ section {
     color: var(--color-dark-grey);
 }
 
-
+/* skills */
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8cac925;
+}
+.skillset {
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-white);
+    margin: 20px 0;
+    width: 100%;
+}
+.skillset__title {
+    color: var(--color-ligth-white);
+}
+.skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 20px 20px;
+}
+.skill {
+    margin: 32px 0px;
+}
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+}
+.skill__bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+.skill__value {
+    height: 3px;
+    background-color: var(--color-green);
+    width: 1%;
+    transition: width 2s ease-in;
+}
+.skill__value.html.active{
+    width: 80%;
+}
+.skill__value.css.active{
+    width: 60%;
+}
+.skill__value.js.active{
+    width: 40%;
+}
+.skill__value.react.active{
+    width: 30%;
+}
+.skill__value.node.active{
+    width: 20%;
+}
+.skillset__right {
+    flex-basis: 40%;
+    
+} 
+.skillset__right li{
+    list-style: circle;
+    margin-left: 10px;
+}
+.tools {
+    background-color: var(--color-grey);
+}
+.tools,
+.etc {
+    padding: 20px;
+}
 
 
 @media screen and (max-width:690px) {
     section {
-        padding : 0px 10px;  
+        padding : 70px 10px;
     }
 
     /* nabar */
@@ -329,7 +398,13 @@ section {
         flex-direction: column;
         align-items: center;
     }
-    .skill{
+    .about__skill{
         margin: 10px 0px;
+        width: 80%;
+    }
+
+    /* skills */
+    .skillset {
+        flex-direction: column;
     }
 }

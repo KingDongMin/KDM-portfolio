@@ -39,7 +39,7 @@
             <li class="navbar__menu__link" data-link="#projects">Projects</li>
             <li class="navbar__menu__link" data-link="#contact">Contact</li>
         </ul>
-        <i class="fa-solid fa-bars navbar__menuBtn"></i>
+        <i class="fa-solid fa-bars navbar__menuBtn" data-click="toggle"></i>
     </nav>
 
     <!-- home -->
@@ -62,13 +62,13 @@
     <!-- about me -->
     <section id="about">
         <h1 class="about__title">About Me</h1>
-        <div class="about__intro">
+        <p class="about__intro">
             안녕하세요.
             사용자의 관점을 시작으로 개발하는 김동민입니다.
             그간 프로젝트에서 하드웨어와 펌웨어를 담당하며 느낀점은 진정한 서비스의 가치는 뛰어난 외적부분의 성능과 더불어 고객이 쉽고 편하게 사용할 수 있어야 한다는 점입니다. 이제는 펌웨어 자리가 아닌 고객과 가장 밀접한 프론트엔드자리에 서서 사용하기 편안한 서비스를 고객에게 제공하도록 Ul/UX 기반으로 프론트엔드를 공부하며 개발하고 있습니다.
-        </div>
+        </p>
         <div class="about__skills">
-            <div class="skill">
+            <div class="about__skill">
                 <i class="fa-brands fa-html5 skill__icon html">
                     <div class="skill__icon__wave html "></div>
                     <div class="skill__icon__percent html ">80%</div>
@@ -79,7 +79,7 @@
                     <li>wireFraming 설계</li>
                 </ul>
             </div>
-            <div class="skill">
+            <div class="about__skill">
                 <i class="fa-brands fa-css3-alt skill__icon css">
                     <div class="skill__icon__wave css"></div>
                     <div class="skill__icon__percent css ">60%</div>
@@ -90,7 +90,7 @@
                     <li>반응형 웹페이지 구현</li>
                 </ul>
             </div>
-            <div class="skill">
+            <div class="about__skill">
                 <i class="fa-brands fa-js skill__icon js">
                     <div class="skill__icon__wave js"></div>
                     <div class="skill__icon__percent js ">40%</div>
@@ -122,7 +122,80 @@
     </section>
 
     <section id="skills">
-        <h1>Skills</h1>
+        <h1 class="skills__title">Skills</h1>
+        <p>
+            사용자에게 편리한 프론트단을 제공하는 것에 목적을 두고 개발하고 있습니다. 기본적인 HTML, CSS, JS를 기반으로 웹페이지 디자인과 퍼블리싱을 구현할 수 있습니다.  더 나아가 프론트엔드에서 각 분야간 협업능력을 기르기 위해 figma, DB설계에 대한 기초지식을 쌓고 있습니다. 
+            <br><br>
+            문제를 직면할때 단순히 코딩만 하지않습니다. 문제를 정의,계획하고 근본적인 원리를 이해하여 해결방안을 모색합니다. 마지막으로 테스트를 통해 확인검증하여 추후에  유지보수 및 재사용 가능한 개발을 하고 있습니다.
+        </p>
+        <div class="skillset">
+            <div class="skillset__left">
+                <h3 class="skillset__title">Skills::</h3>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>HTML</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value html active"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>CSS</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value css"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>JavaScript</span>
+                        <span>40%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value js"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>React</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value react"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>NodeJS</span>
+                        <span>20%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value node"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillset__right">
+                <div class="tools">
+                    <h3 class="skillset__title">Tools::</h3>
+                    <ul class="tools__list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>eclipse</span></li>
+                        <li><span>Android Studio</span></li>
+                    </ul>
+                </div>
+                <div class="etc">
+                    <h3 class="skillset__title">Etc::</h3>
+                    <ul class="etc__list">
+                        <li><span>Git</span></li>
+                        <li><span>Figma</span></li>
+                        <li><span>Notion</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="projects">
         <h1>Projects</h1>
