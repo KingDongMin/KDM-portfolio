@@ -68,6 +68,9 @@ section {
     min-height: 100vh;
     padding : 70px 10%;
 }
+.title{
+    text-shadow: 1px 2px 2px var(--color-black);
+}
 
 /* navbar */
 #navbar {
@@ -384,7 +387,8 @@ section {
 }
 .project__title{
     margin:0;
-    color: var(--color-green);
+    color: var(--color-light-white);
+    text-shadow: 0.7px 1.4px 1px var(--color-green);
 }
 .project__period{
     color:var(--color-brilliant-grey);
@@ -396,6 +400,7 @@ section {
 .project__bottom{
     display: flex;
     width: 100%;
+    background-color: var(--color-light-white);
 }
 .project__left{
     display: flex;
@@ -404,12 +409,12 @@ section {
     justify-content: center;
     flex-basis: 40%;
     padding: 20px;
-    background-color: var(--color-brilliant-grey);
 }
 .project__view{
     width: 300px;
     height: 300px;
     position: relative;
+    border-radius: 10px;
     overflow: hidden;
 }
 .project__imgs{
@@ -440,6 +445,9 @@ section {
     background-color: #4a494c;
     object-fit: contain;
 }
+.project__imgCount{
+    color:var(--color-dark-grey);
+}
 .controller{
     display: flex;
     justify-content: space-around;
@@ -451,6 +459,7 @@ section {
     text-shadow: 1px 2px 5px black;
     transition: all 0.2s ease-in;
     cursor: pointer;
+    color: var(--color-dark-grey);
 }
 .prev:hover,.next:hover{
     /* color: var(--color-green); */
@@ -462,7 +471,10 @@ section {
 
 .project__right{
     flex-basis: 60%;
+    height: auto;
     word-wrap: inherit;
+    color: var(--color-black);
+
 
 }
 .project__right li{
@@ -470,40 +482,83 @@ section {
     list-style: circle;
 }
 .project__description{
-    background-color: var(--color-dark-grey);
+    margin: 10px;
     padding: 20px;
+    border-radius: 10px;
+    background-color: var(--color-white);
 }
 .project__description p{
     margin: 0;
 }
 .project__function{
-    padding:20px;
-    background-color: var(--color-grey);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--color-white);
 }
 .project__myRole{
+    margin: 10px;
     padding: 20px;
-    height: 100%;
-    background-color: var(--color-light-grey);
+    border-radius: 10px;
+    background-color: var(--color-white);
 }
 
-/* js 테스트 */
-.test{
-    width: 200px;
-    background-color: #00f55a;
+/* contact */
+#contact{
+    min-height: 20vh;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding : 20px 10%;
+    text-align: center;
 }
-.test__prev,.test__next{
+.contact__link{
+    font-size: 50px;
+    color: var(--color-white);
+}
+.contact__link i:hover{
+    transform: scale(1.3);
+    color: var(--color-green);
+    transition: all 0.3s ease-in;
+}
+
+/* Arrow up */
+#arrowUp{
+    position: fixed;
     cursor: pointer;
-}
-.test__ul{
-    width: 80%;
-    background-color: #2862e9;
+    bottom: -30px;
+    right: -20px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border: 3px var(--color-light-white) solid;
+    box-shadow: 1px 2px 3px var(--color-grey);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transition: all 0.3s ease-in;
+    /* display를 none으로 하면 애니메이션 적용 안됨 -> 없애는 거라서 */
+    /* 해결방안은 투명도와 클릭이벤트를 설정해주는 것 */
+    opacity: 0;
+    /* 포인터이벤트는 커서뿐 아니라 이벤트도 없애나? */
+    pointer-events: none;
 }
 
-
+#arrowUp.visible{
+    bottom: 30px;
+    right: 20px;
+    opacity: 1;
+    pointer-events: auto;
+}
+#arrowUp.visible:hover{
+    transform: scale(1.2);
+    text-shadow: 0px 0px 10px var(--color-green);
+}
 
 
 
 @media screen and (max-width:690px) {
+    
+
+
     section {
         padding : 70px 10px;
     }

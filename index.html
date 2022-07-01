@@ -61,7 +61,7 @@
 
     <!-- about me -->
     <section id="about">
-        <h1 class="about__title">About Me</h1>
+        <h1 class="about__title title">About Me</h1>
         <p class="about__intro">
             안녕하세요.
             사용자의 관점을 시작으로 개발하는 김동민입니다.
@@ -199,14 +199,70 @@
     </section>
 
     <!-- Projects -->
+
+
+    
     <section id="projects">
-        <h1 class="projects__title">Projects</h1>
+        <h1 class="projects__title title">Projects</h1>
+
+        <div class="project">
+            <div class="project__top">
+                <h2 class="project__title">Portfolio Web</h2>
+                <h3 class="project__subtitle">웹사이트로 구현한 포트폴리오</h3>
+                <p class="project__period">2022.6 ~ (진행중) / 개인프로젝트</p>
+            </div>
+            <div class="project__bottom">
+                <div class="project__left">
+                    <p class="project__imgCount"></p>
+                    <div class="project__view">
+                        <ul class="project__imgs">
+                            <li><img class="project__img" src="imgs/projects/portfolioWeb/main.png" alt="image/jpg"></li>
+                            <li><img class="project__img" src="imgs/projects/portfolioWeb/wireframing.png" alt="image/jpg"></li>
+                            <li><img class="project__img" src="imgs/projects/portfolioWeb/about.png" alt="image/jpg"></li>
+                            <li><img class="project__img" src="imgs/projects/portfolioWeb/skills.png" alt="image/jpg"></li>
+                            <li><img class="project__img" src="imgs/projects/portfolioWeb/projects.png" alt="image/jpg"></li>
+                            <li><img class="project__img" src="imgs/projects/portfolioWeb/contact.png" alt="image/jpg"></li>
+                            <li><img class="project__img" src="imgs/projects/portfolioWeb/반응형.png" alt="image/jpg"></li>
+                        </ul>
+                    </div>
+                    <p class="controller">
+                        <span class="prev"><i class="fa-solid fa-caret-left"></i></span>  
+                        <span class="next"><i class="fa-solid fa-caret-right"></i></span>
+                    </p>
+                </div>
+                <div class="project__right">
+                    <div class="project__description">
+                        <p>포트폴리오를 웹사이트로 구현하였습니다. 프론트엔드를 위한 첫 프로젝트입니다.
+                        <br><br>
+                        기초적인 HTML/CSS/JS를 활용하였습니다. 프로젝트의 기획부터 디자인 그리고 배포까지 해보면서  전반적인 프론트엔드에 대한 기초 지식을 쌓을 수 있었습니다. 포트폴리오 웹을 만들며 웹디자인 능력이 부족하였기에 개선하고자 figma를 학습하고 활용하여 웹디자인을 하였습니다.
+                        </p>
+                    </div>
+                    <div class="project__function">
+                        <h3>기능::</h3>
+                        <ul>
+                            <li>자기소개</li>
+                            <li>현재 보유한 능력</li>
+                            <li>진행한 프로젝트 경험</li>
+                        </ul>
+                    </div>
+                    <div class="project__myRole">
+                        <h3>담당역할::</h3>
+                        <ul>
+                            <li>프로젝트 기획 및 디자인</li>
+                            <li>퍼블리싱</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
 
         <div class="project">
             <div class="project__top">
                 <h2 class="project__title">HappyNic</h2>
                 <h3 class="project__subtitle">IoT기반 피크닉세트 무인대여서비스</h3>
-                <p class="project__period">2021.12(3주) / 팀프로젝트(6명)</p>
+                <p class="project__period">2021.12 (3주) / 팀프로젝트 (6명)</p>
             </div>
             <div class="project__bottom">
                 <div class="project__left">
@@ -235,7 +291,7 @@
                         </p>
                     </div>
                     <div class="project__function">
-                        <h3>기능</h3>
+                        <h3>기능::</h3>
                         <ul>
                             <li>앱을 이용한 바구니 대여서비스</li>
                             <li>웹을 통한 바구니 이용현환파악 및 관리</li>
@@ -243,7 +299,7 @@
                         </ul>
                     </div>
                     <div class="project__myRole">
-                        <h3>담당역할</h3>
+                        <h3>담당역할::</h3>
                         <ul>
                             <li>팀장</li>
                             <li>프로젝트 기획 및 설계</li>
@@ -283,7 +339,7 @@
                         </p>
                     </div>
                     <div class="project__function">
-                        <h3>기능</h3>
+                        <h3>기능::</h3>
                         <ul>
                             <li>등산객 위치 및 방문기록 수집</li>
                             <li>등산객 간의 기록 공유</li>
@@ -291,7 +347,7 @@
                         </ul>
                     </div>
                     <div class="project__myRole">
-                        <h3>담당역할</h3>
+                        <h3>담당역할::</h3>
                         <ul>
                             <li>FirmWare 및 H/W 총괄</li>
                             <li>DB설계</li>
@@ -303,40 +359,17 @@
 
     </section>
     <section id="contact">
-        <h1>Contact</h1>
-
-        <p>test1</p>
-        <div class="test">
-            <p class="test__value">11</p>
-            <div class="test__btn">
-                <span class="test__prev" data-Click="one">prev</span>
-                <span class="test__next">next</span>
-            </div>
-            <ul class="test__ul">
-                <li class="test__li">1</li>
-                <li class="test__li">2</li>
-                <li class="test__li">3</li>
-                <li class="test__li">4</li>
-                <li class="test__li">5</li>
-            </ul>
-        </div>
-        
-        <p>test2</p>
-        <div class="test">
-            <p class="test__value">22</p>
-            <div class="test__btn">
-                <span class="test__prev" data-Click="two">prev</span>
-                <span class="test__next">next</span>
-            </div>
-            <ul class="test__ul">
-                <li class="test__li">1</li>
-                <li class="test__li">2</li>
-                <li class="test__li">3</li>
-            </ul>
-        </div>
-
-        
+        <h1 class="contact__title title">Contact</h1>
+        <h3 class="contact__description">방문해 주셔서 감사합니다.</h3>
+        <h3 class="contact__email">macaw2469@gmail.com</h3>
+        <a class="contact__link"href="https://github.com/KingDongMin"><i class="fa-brands fa-github"></i></a>
+        <p>Kim Dong Min © 2022PORTFOLIO</p>
     </section>
+
+    <!-- Arrow up -->
+    <button id="arrowUp" class="" data-link="#home">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     
 </body>
 </html>

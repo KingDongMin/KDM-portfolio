@@ -100,7 +100,7 @@ document.addEventListener('scroll', ()=> {
             i.classList.remove('active');
         }
     }
-})
+});
 
 
 // project img slider
@@ -117,10 +117,7 @@ const projectImgsWidthNumber = projectImgsWidth.replace(regex,"");
 // 이미지 카운트 태그에 이미지 숫자 넣기
 const imgCount = document.querySelector(".project__imgCount");
 let curImgIdx = 1;//현재 이미지 인덱스
-let aa = imgCount.innerHTML = ` ${curImgIdx} / ${projectImgIdx}`;
-
-
-
+imgCount.innerHTML = ` ${curImgIdx} / ${projectImgIdx}`;
 
 next.addEventListener('click', ()=>{
     // 현재 프로젝트이미지ul의 translate값을 가져온다.
@@ -135,11 +132,9 @@ next.addEventListener('click', ()=>{
         projectImgs.style.transform = `translate(${-(currentTranslate+400)}px)`;
         curImgIdx++;
     }
-
     // 현재이미지인덱스를 증감후 마지막에 할당
-    imgCount.innerHTML = ` ${curImgIdx} / ${projectImgIdx}`;
-    
-})
+    imgCount.innerHTML = ` ${curImgIdx} / ${projectImgIdx}`; 
+});
 
 prev.addEventListener('click', ()=>{
     const currentTranslate = Number(projectImgs.style.transform.replace(regex,""));
@@ -152,67 +147,21 @@ prev.addEventListener('click', ()=>{
         curImgIdx--;
     }
     imgCount.innerHTML = ` ${curImgIdx} / ${projectImgIdx}`;
-})
-
-// 위 이미지슬라이드 js를 여러 프로젝트에 적용하기 위해서는?
-
-const testPrev = document.querySelectorAll('.test__prev');
-const testValue = document.querySelectorAll('.test__value');
-console.log(testValue);
-
-EventTarget.addEventListener();
+});
 
 
+// arrow up visible
+const arrow = document.querySelector('#arrowUp');
+const home = document.querySelector('#home');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    if(window.scrollY > homeHeight/2){
+        arrow.classList.add('visible');
+    }else{
+        arrow.classList.remove('visible');
+    }
+});
 
-
-
-
-
-
-
-// const testPrev = document.querySelectorAll(".test__prev");
-// const testNext = document.querySelector(".test__next");
-// const testUl = document.querySelectorAll('.test__ul');
-// let ulTotal = testUl.childElementCount;// 이건 안됨
-// const ulCount = document.querySelectorAll(".test__ulCount");
-// let curCount = [1,1];
-// ulTotal = [];
-// // 각각의 ul안 li의 갯수를 파악하여야 한다.
-// // ul은 test1 , test2에 있으므로 2개 존재한다.
-// for(var i= 0 ; i < testUl.length; i++){
-//     console.log(testUl[i].childElementCount);
-//     ulTotal[i] = testUl[i].childElementCount;
-// };
-// console.log(ulTotal[1]);
-// ulCount[0].innerHTML = `${curCount[0]} / ${ulTotal[0]}`;
-// for(var i= 0 ; i < testPrev.length; i++){
-//     testPrev[i].addEventListener('click', (event)=>{
-//     console.log(event.target)
-//     if(curCount[i] <= 1){
-//         curCount[i] = ulTotal[i];
-//     }else{
-//         curCount[i]--;  
-//     }
-//     ulCount[i].innerHTML = `${curCount[i]} / ${ulTotal[i]}`;
-//     })
-// }
-
-
-// testPrev[1].addEventListener('click', (event)=>{
-//     console.log(event.target)
-//     if(curCount <= 1){
-//         curCount = ulTotal;
-//     }else{
-//         curCount--;  
-//     }
-//     ulCount.innerHTML = `${curCount} / ${ulTotal}`;
-// })
-
-// testNext.addEventListener('click', ()=>{
-//     if(curCount >= ulTotal){
-//         curCount = 1;
-//     }else{
-//         curCount++;
-//     }
-//     ulCount.innerHTML = `${curCount} / ${ulTotal}`;
-// })
+arrow.addEventListener('click',()=>{
+    home.scrollIntoView({behavior:'smooth'});
+});
