@@ -282,6 +282,9 @@ section {
 }
 .about__careers{
     margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 .career {
     display: flex;
@@ -378,7 +381,7 @@ section {
     color:var(--color-white);
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 1px 2px 10px black;
+    box-shadow: 0.5px 1px 2px black;
 }
 .project__top{
     background-color: var(--color-black);
@@ -409,6 +412,7 @@ section {
     justify-content: center;
     flex-basis: 40%;
     padding: 20px;
+    position: relative;
 }
 .project__view{
     width: 300px;
@@ -450,16 +454,20 @@ section {
 }
 .controller{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
+    position: absolute;
+    top : 45%;
+
+    
 }
 .prev,.next{
     padding : 10px 30px;
     font-size: 50px;
-    text-shadow: 1px 2px 5px black;
+    text-shadow: 1px 2px 2px var(--color-light-grey);
     transition: all 0.2s ease-in;
     cursor: pointer;
-    color: var(--color-dark-grey);
+    color: var(--color-black);
 }
 .prev:hover,.next:hover{
     /* color: var(--color-green); */
@@ -474,8 +482,6 @@ section {
     height: auto;
     word-wrap: inherit;
     color: var(--color-black);
-
-
 }
 .project__right li{
     margin-left: 20px;
@@ -562,6 +568,11 @@ section {
     section {
         padding : 70px 10px;
     }
+    /* about */
+    .about__careers{
+        display: flex;
+        flex-direction: column;
+    }
 
     /* nabar */
     #navbar{
@@ -606,5 +617,11 @@ section {
     }
     .project__bottom{
         flex-direction: column;
+    }
+    .controller{
+        color: var(--color-white);
+    }
+    .prev,.next{
+        color: var(--color-light-white);
     }
 }
