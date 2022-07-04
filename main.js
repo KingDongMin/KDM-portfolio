@@ -6,8 +6,8 @@ const navbarMenuBtn = document.querySelector(".navbar__menuBtn");
 const navbarMenu = document.querySelector(".navbar__menu");
 
 navbarMenuBtn.addEventListener("click", () => {
-  navbarMenu.classList.toggle("active");
-  navbar.classList.add("navbar--dark");
+    navbarMenu.classList.toggle("active");
+    navbar.classList.add("navbar--dark");
 });
 
 // 스크롤시 navbar의 배경색 변경
@@ -152,6 +152,98 @@ prev.addEventListener("click", () => {
   }
   imgCount.innerHTML = ` ${curImgIdx} / ${projectImgIdx}`;
 });
+
+// 여러 프로젝트에 이벤트 핸들링을 효율적으로 지정하는 방안을 찾아야함
+
+// 해피닉
+const prevA = document.querySelector(".prev.a");
+const nextA = document.querySelector(".next.a");
+const projectImgsA = document.querySelector(".project__imgs.a");
+const projectImgIdxA = projectImgsA.childElementCount; 
+const projectImgsWidthA = (projectImgsA.style.width = `${projectImgIdxA * 400}px`);
+const projectImgsWidthNumberA = projectImgsWidthA.replace(regex, "");
+
+const imgCountA = document.querySelector(".project__imgCount.a");
+let curImgIdxA = 1;
+imgCountA.innerHTML = ` ${curImgIdxA} / ${projectImgIdxA}`;
+
+nextA.addEventListener("click", () => {
+  const currentTranslate = Number(
+    projectImgsA.style.transform.replace(regex, "")
+  );
+  if (currentTranslate >= projectImgsWidthNumberA - 400) {
+    projectImgsA.style.transform = `translate(0px)`;
+    curImgIdxA = 1;
+  } else {
+    projectImgsA.style.transform = `translate(${-(currentTranslate + 400)}px)`;
+    curImgIdxA++;
+  }
+  imgCountA.innerHTML = ` ${curImgIdxA} / ${projectImgIdxA}`;
+});
+
+prevA.addEventListener("click", () => {
+  const currentTranslate = Number(
+    projectImgsA.style.transform.replace(regex, "")
+  );
+
+  if (currentTranslate == 0) {
+    projectImgsA.style.transform = `translate(${-(
+      projectImgsWidthNumberA - 400
+    )}px)`;
+    curImgIdxA = projectImgIdxA;
+  } else {
+    projectImgsA.style.transform = `translate(${-(currentTranslate - 400)}px)`;
+    curImgIdxA--;
+  }
+  imgCountA.innerHTML = ` ${curImgIdxA} / ${projectImgIdxA}`;
+});
+
+// 산타
+const prevB = document.querySelector(".prev.b");
+const nextB = document.querySelector(".next.b");
+const projectImgsB = document.querySelector(".project__imgs.b");
+const projectImgIdxB = projectImgsB.childElementCount; 
+const projectImgsWidthB = (projectImgsB.style.width = `${projectImgIdxB * 400}px`);
+const projectImgsWidthNumberB = projectImgsWidthB.replace(regex, "");
+
+const imgCountB = document.querySelector(".project__imgCount.b");
+let curImgIdxB = 1;
+imgCountB.innerHTML = ` ${curImgIdxB} / ${projectImgIdxB}`;
+
+nextB.addEventListener("click", () => {
+  const currentTranslate = Number(
+    projectImgsB.style.transform.replace(regex, "")
+  );
+  if (currentTranslate >= projectImgsWidthNumberB - 400) {
+    projectImgsB.style.transform = `translate(0px)`;
+    curImgIdxB = 1;
+  } else {
+    projectImgsB.style.transform = `translate(${-(currentTranslate + 400)}px)`;
+    curImgIdxB++;
+  }
+  imgCountB.innerHTML = ` ${curImgIdxB} / ${projectImgIdxB}`;
+});
+
+prevB.addEventListener("click", () => {
+  const currentTranslate = Number(
+    projectImgsB.style.transform.replace(regex, "")
+  );
+
+  if (currentTranslate == 0) {
+    projectImgsB.style.transform = `translate(${-(
+      projectImgsWidthNumberB - 400
+    )}px)`;
+    curImgIdxB = projectImgIdxB;
+  } else {
+    projectImgsB.style.transform = `translate(${-(currentTranslate - 400)}px)`;
+    curImgIdxB--;
+  }
+  imgCountB.innerHTML = ` ${curImgIdxB} / ${projectImgIdxB}`;
+});
+
+
+
+
 
 // arrow up visible
 const arrow = document.querySelector("#arrowUp");
