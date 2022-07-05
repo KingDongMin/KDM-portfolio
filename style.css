@@ -122,6 +122,7 @@ section {
     display: none;
     cursor: pointer;
 }
+
 .navbar__menuBtn:hover{
     color: var(--color-green);
     transform: scale(1.15);
@@ -223,6 +224,7 @@ section {
     box-shadow: 2px 4px 5px 1px rgba(167, 167, 167, 0.957);
     position: relative;
     overflow: hidden;
+    
     transition: color 2s ease-in;
 }
 #about .about__skill ul{
@@ -463,15 +465,9 @@ section {
 .prev,.next{
     padding : 10px 30px;
     font-size: 50px;
-    transition: all 0.2s ease-in;
     cursor: pointer;
     color: var(--color-brilliant-grey);
     text-shadow: 1px 2px var(--color-dark-grey);
-}
-.prev:hover,.next:hover{
-    /* color: var(--color-green); */
-    text-shadow: 0px 0px 20px var(--color-green);
-    transform: scale(1.5);
 }
 
 .project__right{
@@ -558,10 +554,7 @@ section {
     opacity: 1;
     pointer-events: auto;
 }
-#arrowUp.visible:hover{
-    transform: scale(1.2);
-    text-shadow: 0px 0px 10px var(--color-green);
-}
+
 
 
 @media screen and (max-width:850px){
@@ -629,8 +622,8 @@ section {
 
 
     #arrowUp{
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         font-size: 10px;
     }
 }
