@@ -28,6 +28,7 @@ document.addEventListener("scroll", () => {
     navbar.classList.add("navbar--dark");
   } else {
     navbar.classList.remove("navbar--dark");
+    if (navbarMenu.className == 'navbar__menu active') navbarMenu.classList.remove("active");
   }
 });
 
