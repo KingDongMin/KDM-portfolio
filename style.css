@@ -141,14 +141,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#home video{
-    position:absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    filter: brightness(50%);
+    background-color: #272629;
 }
 .home__profile{
     position: relative;
