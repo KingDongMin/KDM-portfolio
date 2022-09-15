@@ -69,6 +69,7 @@ section {
     padding : 70px 10%;
 }
 .title{
+    margin: 30px 0px;
     text-shadow: 1px 2px 2px var(--color-black);
 }
 
@@ -165,13 +166,12 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .about__skills{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-top: 40px;
+    margin: 50px;
 }
 .about__skill{
     display: flex;
@@ -191,17 +191,10 @@ section {
     box-shadow: 2px 4px 5px 1px rgba(167, 167, 167, 0.957);
     position: relative;
     overflow: hidden;
-    
     transition: color 2s ease-in;
 }
-#about .about__skill ul{
-    font-size: var(--font-size-small);
-    margin: 0px;
-}
-#about .about__skill li{
-    list-style:circle;
-    padding: 5px 0px;
-    color:var(--color-light-grey);
+.about__skill h3{
+    margin: 20px 0px;
 }
 #about .skill__icon__wave{
     width: 300px;
@@ -227,15 +220,15 @@ section {
 }
 #about .skill__icon__wave.html.waveOn {
     background-color: #f16529;
-    bottom: -130%;
+    bottom: -120%;
 }
 #about .skill__icon__wave.css.waveOn {
     background-color: #2862e9;
-    bottom: -150%;
+    bottom: -140%;
 }
 #about .skill__icon__wave.js.waveOn {
     background-color: #e8b824;
-    bottom: -170%;
+    bottom: -140%;
 }
 #about .skill__icon.html.active{
     color: #f16529 ;
@@ -275,7 +268,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #c8cac925;
 }
 .skillset {
     display: flex;
@@ -311,13 +303,13 @@ section {
     transition: width 2s ease-in;
 }
 .skill__value.html.active{
-    width: 80%;
+    width: 90%;
 }
 .skill__value.css.active{
-    width: 60%;
+    width: 80%;
 }
 .skill__value.js.active{
-    width: 40%;
+    width: 80%;
 }
 .skill__value.react.active{
     width: 30%;
