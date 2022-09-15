@@ -49,9 +49,9 @@ p {
 /* 시멘틱태그 */
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 body{
-    margin:0;
     font-family: 'Do Hyeon', sans-serif;
     /* 글자사이 간격 조절 */
     letter-spacing:1.2px; 
@@ -77,31 +77,18 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 100%;
-    padding: 14px 12px;
+    padding: 14px 10%;
     position: fixed;
     top:0;
     transition: all 0.4s ease-in;
     z-index: 2;
-
     background-color: transparent;
     color: var(--color-white);
-}
-.navbar__logo{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.navbar__logo i{
-    font-size: 25px;
-    padding-right: 7px;
 }
 .navbar__menu{
     display: flex;
     cursor: pointer;
-
-    margin:0;
 }
 .navbar__menu li{
     padding: 7px 11px;
@@ -122,13 +109,11 @@ section {
     display: none;
     cursor: pointer;
 }
-
 .navbar__menuBtn:hover{
     color: var(--color-green);
     transform: scale(1.15);
     transition: transform 0.22s ease-in;
 }
-/* 맨 상단에서 벗어나면 배경색 지정 */
 #navbar.navbar--dark {
     background-color: var(--color-black);
     box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.406);
@@ -564,9 +549,6 @@ section {
 }
 
 @media screen and (max-width:690px) {
-    
-
-
     section {
         padding : 70px 10px;
     }
