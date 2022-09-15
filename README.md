@@ -1,3 +1,3 @@
 # portfolio
 
-    KimDongMin's portfolio
+    KimDongMin portfolio
