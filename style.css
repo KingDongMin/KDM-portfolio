@@ -314,9 +314,6 @@ section {
 .skill__value.react.active{
     width: 30%;
 }
-.skill__value.node.active{
-    width: 20%;
-}
 .skillset__right {
     flex-basis: 40%;
     
